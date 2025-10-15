@@ -1,0 +1,31 @@
+@startuml
+class Shape {
+    - color : String
+    + Shape(String color)
+    + draw() : void
+}
+
+class Circle extends Shape {
+    - radius : double
+    + Circle(String color, double radius)
+    + draw() : void
+}
+
+class Rectangle extends Shape {
+    - width : double
+    - height : double
+    + Rectangle(String color, double width, double height)
+    + draw() : void
+}
+
+class Triangle extends Shape {
+    - base : double
+    - height : double
+    + Triangle(String color, double base, double height)
+    + draw() : void
+}
+
+Shape <|-- Circle
+Shape <|-- Rectangle
+Shape <|-- Triangle
+@enduml
